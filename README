@@ -1,0 +1,4 @@
+npm install --gobal yarn 
+yarn init (type project names)
+yarn install
+yarn create vite client > React > JavaScript
