@@ -2,13 +2,23 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+
 export default function RegisterPage(){
   const [name,setName] = useState('');
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
   function registerUser(ev){
     ev.preventDefault();
-    axios.get('http://localhost:4000/test');
+    axios.post('/register',{
+      name,
+      email,
+      password,
+    }).then((res)=>{
+      console.log('axios:',res);
+      console.log('axios data:',res.data);
+    }).catch((err)=>{
+      console.log('axios error',err);
+    })
   }
   return (
     <div className="mt-4 grow flex items-center justify-around">
@@ -16,8 +26,8 @@ export default function RegisterPage(){
     <h1 className="text-4xl text-center mb-4">Register</h1>
       <form className="max-w-md mx-auto" onSubmit={registerUser}>
         <input type="text" placeholder='John Doe' 
-                value={name} 
-                onChange={ev=>setName(ev.target.value)} />
+              value={name} 
+              onChange={ev=>setName(ev.target.value)} />
         <input type="email" placeholder='your@email.com'
               value={email} 
               onChange={ev=>setEmail(ev.target.value)}/>
