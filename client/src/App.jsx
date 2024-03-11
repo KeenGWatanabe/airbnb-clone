@@ -6,7 +6,7 @@ import Layout from './Layout'
 import RegisterPage from './pages/RegisterPage'
 import axios from 'axios'
 
-axios.defaults.baseUrl = 'http://localhost:4000';
+axios.defaults.baseUrl = 'http://localhost:3000';
 function App() {
    return (
     <Routes>
