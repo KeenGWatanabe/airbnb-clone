@@ -12,12 +12,7 @@ export default function RegisterPage(){
       name,
       email,
       password,
-    }).then((res)=>{
-      console.log('axios:',res);
-      console.log('axios data:',res.data);
-    }).catch((err)=>{
-      console.log('axios error',err);
-    })
+    });
   }
   return (
     <div className="mt-4 grow flex items-center justify-around">
