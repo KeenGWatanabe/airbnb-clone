@@ -10,11 +10,11 @@ app.use(cors({
   origin: 'http://localhost:5173',
 }));
 console.log(process.env.MONGOD_URI);
-mongoose.connect(process.env.MONGOD_URI);
+mongoose.connect();
 app.get('/test', (req, res) => {
   res.json('test ok');
 });
-//tonboswimmers%40gmail.com
+
 app.post('/register', (req, res) => {
   const {name,email,password} = req.body;
   res.json({name,email,password});  
