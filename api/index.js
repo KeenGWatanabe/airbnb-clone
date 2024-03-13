@@ -10,7 +10,7 @@ app.use(cors({
   origin: 'http://localhost:5173',
 }));
 console.log(process.env.MONGOD_URI);
-mongoose.connect('mongodb+srv://booking:tonboswimmers%40gmail.com@airbnc.dyqmkoc.mongodb.net/?retryWrites=true&w=majority&appName=airbnc');
+mongoose.connect(process.env.MONGOD_URI);
 app.get('/test', (req, res) => {
   res.json('test ok');
 });
