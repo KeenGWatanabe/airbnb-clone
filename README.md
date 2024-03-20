@@ -12,4 +12,4 @@ yarn create vite client > React > JavaScript
 -once client directory up, from terminal, cd client folder > yarn;
 -after yarn installed in client> directory, type yarn dev; (to get port number for browser open)
 
-240319: video stopped at 32:36
+240321: video stopped at 44:07
