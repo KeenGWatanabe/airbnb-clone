@@ -20,5 +20,5 @@ airbnb-clone\api>npm install express
 airbnb-clone\api>yarn install cors
 airbnb-clone\api>
 
-240321: video stopped at 52:08 
-(after installing axios at /api)
+240321: video stopped at 57:10 
+(before installing mongoose))

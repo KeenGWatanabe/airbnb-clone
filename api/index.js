@@ -19,10 +19,11 @@ app.get('/test', (req, res) => {
 
 app.post('/register', (req, res) => {
   const {name,email,password} = req.body;
-  User.create({
-    name,
-    email,
-    password});  
+    res.json({name,email,password});
+  // User.create({
+  //   name,
+  //   email,
+  //   password});  
 })
 app.listen(3000, () =>{
    console.log('Server listening on port 3000...')
