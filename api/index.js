@@ -1,9 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 const User = require('./models/User');
 require('dotenv').config()
 const app = express();
+const bcryptSalt = bcrypt.genSaltSync(10); 
 
 app.use(express.json());
 app.use(cors({
@@ -11,19 +13,21 @@ app.use(cors({
   origin: 'http://localhost:5173',
 }));
 
-mongoose.connect('mongodb+srv://booking:tonboswimmers%40gmail.com@airbnc.dyqmkoc.mongodb.net/?retryWrites=true&w=majority&appName=airbnc');
+mongoose.connect(process.env.MONGO_URL);
 
 app.get('/test', (req, res) => {
   res.json('test ok');
 });
 
-app.post('/register', (req, res) => {
+
+app.post('/register', async (req, res) => {
   const {name,email,password} = req.body;
-    res.json({name,email,password});
-  // User.create({
-  //   name,
-  //   email,
-  //   password});  
+  const userDoc = await User.create({
+    name,
+    email,
+    password:bcrypt.hashSync(password, bcryptSalt),
+  });  
+    res.json(userDoc);
 })
 app.listen(3000, () =>{
    console.log('Server listening on port 3000...')

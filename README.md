@@ -18,7 +18,10 @@ yarn create vite client > React > JavaScript
 
 airbnb-clone\api>npm install express 
 airbnb-clone\api>yarn install cors
-airbnb-clone\api>
+airbnb-clone\api>yarn add mongoose
+airbnb-clone\api>yarn add dotenv
+airbnb-clone\api>yarn add bcryptjs
 
-240321: video stopped at 57:10 
-(before installing mongoose))
+
+240321: video stopped at 1:09 
+(after installing bcryptjs)
