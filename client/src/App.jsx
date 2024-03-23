@@ -1,3 +1,4 @@
+import axios from 'axios';
 import './App.css';
 import {Route, Routes} from "react-router-dom";
 import IndexPage from "./pages/IndexPage"
@@ -5,6 +6,7 @@ import LoginPage from './pages/LoginPage';
 import Layout from './Layout';
 import RegisterPage from './pages/RegisterPage';
 
+axios.defaults.baseUrl = 'http://localhost:3000';
 function App() {
   return (
     <Routes>
