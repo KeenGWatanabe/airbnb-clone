@@ -5,10 +5,10 @@ export default function RegisterPage(){
   const [name,setName] = useState('');
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
-  async function registerUser(ev){
+  async function registerUser(ev){ //async await function*
     ev.preventDefault();
     try {
-      await axios.post('/register',{
+      await axios.post('/register',{ //async await function*
         name,
         email,
         password,

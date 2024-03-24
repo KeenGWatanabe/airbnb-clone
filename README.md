@@ -1,8 +1,12 @@
 airbnb
-  |
-  |_client (frontend react app)
-  |
-  |__api (express backend app)
+  | (frontend react app)
+  |_client > src > pages_IndexPage
+  |                     |_LoginPage
+  |                     |_RegisterPage
+  |     
+  |                      
+  |  (express backend app) 
+  |__api > models_User.js 
 
 
 INSTALLATION GUIDE:
