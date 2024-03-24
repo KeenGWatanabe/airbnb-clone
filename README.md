@@ -23,5 +23,5 @@ airbnb-clone\api>yarn add dotenv
 airbnb-clone\api>yarn add bcryptjs
 
 
-240321: video stopped at 1:09 
-(after installing bcryptjs)
+240321: video stopped at 1:12 
+(registration unique email done)

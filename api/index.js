@@ -22,13 +22,18 @@ app.get('/test', (req, res) => {
 
 app.post('/register', async (req, res) => {
   const {name,email,password} = req.body;
-  const userDoc = await User.create({
-    name,
-    email,
-    password:bcrypt.hashSync(password, bcryptSalt),
+  
+  try{
+    const userDoc = await User.create({
+      name,
+      email,
+      password:bcrypt.hashSync(password, bcryptSalt),
   });  
-    res.json(userDoc);
-})
+  res.json(userDoc);
+} catch (e){
+  res.status(422).json(e);
+}
+});
 app.listen(3000, () =>{
    console.log('Server listening on port 3000...')
   });
