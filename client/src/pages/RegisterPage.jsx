@@ -23,12 +23,18 @@ export default function RegisterPage(){
       <div className="mb-64">
         <h1 className="text-center text-4xl mb-4">Register</h1>
           <form className="max-w-lg mx-auto" onSubmit={registerUser}>
-            <input type="text" placeholder="John Doe"
-            value={name} onChange={ev => setName(ev.target.value)}/>
-            <input type="email" placeholder="your@email.com"
-            value={email} onChange={ev => setEmail(ev.target.value)}/>  
-            <input type="password" placeholder="password"
-            value={password} onChange={ev => setPassword(ev.target.value)}/>
+            <input type="text" 
+              placeholder="John Doe"
+              value={name} 
+              onChange={ev => setName(ev.target.value)}/>
+            <input type="email" 
+              placeholder="your@email.com"
+              value={email} 
+              onChange={ev => setEmail(ev.target.value)}/>  
+            <input type="password" 
+              placeholder="password"
+              value={password} 
+              onChange={ev => setPassword(ev.target.value)}/>
             <button className="primary">Register</button>
             <div className="text-center py-2 text-gray-500">
             Already a member? 
