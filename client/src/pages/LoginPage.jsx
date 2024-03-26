@@ -7,11 +7,8 @@ export default function LoginPage(){
   const [password, setPassword] = useState('');
   async function handleLoginSubmit(ev){ //async await function*
     ev.preventDefault();
-    try {
-      await axios.post('/login', { //async await function*
-        email, 
-        password,
-      });
+    try {//async await function*
+      await axios.post('/login', {email, password});
       alert('Login successful');
     } catch (e) {
       alert('Login failed');

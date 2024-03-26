@@ -28,5 +28,5 @@ airbnb-clone\api>yarn add dotenv
 airbnb-clone\api>yarn add bcryptjs
 airbnb-clone\api>yarn add jsonwebtoken
 
-240326: video stopped at 1:22 
+240326: video stopped at 1:26 
 (cookie jwt for email ,password, doc)
