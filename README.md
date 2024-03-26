@@ -6,7 +6,8 @@ airbnb
   |     
   |                      
   |  (express backend app) 
-  |__api > models_User.js 
+  |__api > models > User.js
+        |_ index.js
 
 
 INSTALLATION GUIDE:
