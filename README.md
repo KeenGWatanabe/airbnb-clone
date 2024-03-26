@@ -25,7 +25,7 @@ airbnb-clone\api>yarn install cors
 airbnb-clone\api>yarn add mongoose
 airbnb-clone\api>yarn add dotenv
 airbnb-clone\api>yarn add bcryptjs
+airbnb-clone\api>yarn add jsonwebtoken
 
-
-240321: video stopped at 1:16 
-(authenticate login emails)
+240326: video stopped at 1:22 
+(cookie jwt for email ,password, doc)

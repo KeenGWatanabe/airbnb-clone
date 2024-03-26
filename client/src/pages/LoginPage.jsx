@@ -5,10 +5,10 @@ import axios from "axios";
 export default function LoginPage(){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  async function handleLoginSubmit(ev){
+  async function handleLoginSubmit(ev){ //async await function*
     ev.preventDefault();
     try {
-      await axios.post('/login', {
+      await axios.post('/login', { //async await function*
         email, 
         password,
       });
